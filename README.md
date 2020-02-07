@@ -29,3 +29,7 @@ python dataMaster_[PkdDT_master]_[eTS,MD].py 0 0 effInt spam
 
 #### Where are results saved?
 For instance, "eTS/each experiment, each train size/spam-PDDT_effInt-ex0tr0.npy" will store the test error of the tree-pruning. 
+
+## Remarks
+### Computational efficiency
+pac-bayes-tree approaches have the same complexity as tree-pruning in the sense that the number of internal nodes visited at training/test time are roughly the same. The current implementation of pac-bayes-tree is slower than tree-pruning because of the extra precision necessary to compute weights for pac-bayes-tree. 
